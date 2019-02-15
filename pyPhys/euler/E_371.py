@@ -1,0 +1,40 @@
+
+'''
+Oregon licence plates consist of three letters followed by a three digit number (each digit can be from [0..9]).
+While driving to work Seth plays the following game:
+Whenever the numbers of two licence plates seen on his trip add to 1000 that's a win.
+
+E.g. MIC-012 and HAN-988 is a win and RYU-500 and SET-500 too. (as long as he sees them in the same trip).
+
+Find the expected number of plates he needs to see for a win.
+Give your answer rounded to 8 decimal places behind the decimal point.
+
+Note: We assume that each licence plate seen is equally likely to have any three digit number on it.
+'''
+
+# Second Attempt Using Monte Carlo Tree
+
+
+
+
+# First Attempt Using Bernoulli Random Numbers
+'''
+# 1000 unique plates (000-999)
+# (1/1000) = Prob of getting the unmatched number, 000
+
+# Prob of getting a car with a winning counterpart
+matched = (999/1000)
+# Prob of getting the winning counterpart after
+winner_winner = (1/1000)
+
+
+def chicken_dinner():
+    # Prob of getting two that add up in a row
+    p_win = matched * winner_winner * .5
+    gauss = 1
+
+    expected = gauss/p_win
+    return expected
+
+print(chicken_dinner())
+'''
